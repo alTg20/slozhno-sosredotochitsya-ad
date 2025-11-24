@@ -3,14 +3,34 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   padding: 20px;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .header {
 
 }
 
+.header__theme-menu-button {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);  /* Mobile */
+  color: #db00ff;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
 .header_title {
 
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: black;
 }
 
 .content {
@@ -21,11 +41,11 @@
 }
 
 section {
-  
+  display: grid;
 }
 
 .why_hard {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
@@ -35,6 +55,7 @@ h2 {
   font-size: 18px;
   line-height: 23.4px;
   margin: 0;
+  color: #ff0070;
 }
 
 .why_hard-title {
@@ -47,8 +68,25 @@ h3 {
   margin: 0 0 10px;
 }
 
+section p {
+  color: #f1b2ce;
+}
+
+a {
+  color: #f1b2ce;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 1px solid #f1b2ce;
+}
+
 .what_lowers {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, min-content);
   gap: 20px;
@@ -63,7 +101,7 @@ h3 {
 }
 
 .how_better {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(5, min-content);
   gap: 20px;
@@ -73,20 +111,44 @@ h3 {
   grid-row: span 5;
 }
 
-.pictures {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content repeat(3, 1fr);
-  grid-template-areas:
+.gallery {
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, min-content);
+  /* grid-template-areas:
     "title title title"
     ""
     ""
-    "";
+    ""; */
   gap: 20px;
 }
 
-.pictures-title {
-  grid-area: title;
+.gallery-title {
+  /* grid-area: title; */
+}
+
+img {
+  width: 100%;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: icecream;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.books {
+  grid-area: books;
+}
+
+.street {
+  grid-area: street;
 }
 
 .footer {
