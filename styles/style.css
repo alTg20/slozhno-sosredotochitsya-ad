@@ -2,4 +2,93 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  padding: 20px;
+}
+
+.header {
+
+}
+
+.header_title {
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 60px 0;
+}
+
+section {
+  
+}
+
+.why_hard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+}
+
+.why_hard-title {
+  grid-row: span 2;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0 0 10px;
+}
+
+.what_lowers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  gap: 20px;
+}
+
+.what_lowers-title {
+  grid-column: 1;
+}
+
+.what_lowers-article {
+  grid-column: span 3;
+}
+
+.how_better {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, min-content);
+  gap: 20px;
+}
+
+.how_better-title {
+  grid-row: span 5;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content repeat(3, 1fr);
+  grid-template-areas:
+    "title title title"
+    ""
+    ""
+    "";
+  gap: 20px;
+}
+
+.pictures-title {
+  grid-area: title;
+}
+
+.footer {
+  
 }
