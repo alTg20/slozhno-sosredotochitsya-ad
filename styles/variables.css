@@ -4,12 +4,14 @@
 */
 :root {
   --accent-color: #ff0070;
+  --page-bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
   --fullscreen-height: 668px;
   --page-padding: 10px;
   --decorations-color: var(--accent-color);
   --text-color: #f1b2ce;
   --big-title-color: #db00ff;
-  --title-color: #000028;
+  --big-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* Mobile */
+  --title-color: var(--page-bg-color);
   --button-hover-color: rgb(255 0 112 / 0.5);
 }
