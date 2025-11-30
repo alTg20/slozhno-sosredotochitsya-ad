@@ -61,7 +61,6 @@
 
 .header__theme-menu {
   justify-self: end;
-  /* margin-top: 75px; */
 }
 
 .header__theme-menu-list {
@@ -81,7 +80,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgb(255 0 112 / 0.5);
+  border: 1px solid var(--button-hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -106,7 +105,7 @@ h1 {
 
 .title-decor {
   background-color: var(--accent-color);
-  color: black;
+  color: var(--title-color);
 }
 
 .content {
@@ -345,7 +344,6 @@ img {
   .header__theme-menu {
     grid-column: span 2;
     justify-self: center;
-    /* margin-top: var(--page-padding); */
   }
 
   .header__theme-menu-list {

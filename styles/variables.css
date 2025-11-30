@@ -10,4 +10,6 @@
   --decorations-color: var(--accent-color);
   --text-color: #f1b2ce;
   --big-title-color: #db00ff;
+  --title-color: #000028;
+  --button-hover-color: rgb(255 0 112 / 0.5);
 }
