@@ -13,6 +13,7 @@
   --accent-color: #ff8dcb;
   --decorations-color: #353430;
   --text-color: var(--decorations-color);
+  --big-title-color: #ffc2e6;
 }
 
 :root.theme-light .rec {

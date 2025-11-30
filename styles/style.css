@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  padding: var(--page-padding);
+  padding: 0 var(--page-padding);
   background-image: var(--bg-image);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   grid-template-rows: repeat(3, 1fr);
   position: relative;
   align-items: center;
-  height: calc(var(--fullscreen-height) - var(--page-padding));
+  height: var(--fullscreen-height);
 }
 
 .header::before {
@@ -24,7 +24,7 @@
   height: 25px;
   width: 25px;
   position: absolute;
-  top: 0;
+  top: var(--page-padding);
   right: 0;
   border-top: 1px solid var(--decorations-color);
   border-right: 1px solid var(--decorations-color);
@@ -44,7 +44,7 @@
 
 .rec {
   position: absolute;
-  top: 0;
+  top: var(--page-padding);
   right: 9px;
   color: var(--accent-color);
   line-height: 25px;
@@ -96,7 +96,7 @@
 
 h1 {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* Mobile */
-  color: #db00ff;
+  color: var(--big-title-color);
 }
 
 .header_title {
@@ -235,14 +235,14 @@ img {
 }
 
 .footer {
-  height: calc(var(--fullscreen-height) - var(--page-padding));
+  height: var(--fullscreen-height);
   display: grid;
   position: relative;
 }
 
 .footer_title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* Mobile */
-  color: #db00ff;
+  color: var(--big-title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   margin: auto;
 }
@@ -265,7 +265,7 @@ img {
   height: 25px;
   width: 25px;
   position: absolute;
-  bottom: 0;
+  bottom: var(--page-padding);
   left: 0;
   border-bottom: 1px solid var(--decorations-color);
   border-left: 1px solid var(--decorations-color);
@@ -339,15 +339,17 @@ img {
   .header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content repeat(3, 1fr);
-  }
-
-  .header__theme-menu-list {
-    flex-direction: row;
+    padding-top: var(--page-padding);
   }
 
   .header__theme-menu {
     grid-column: span 2;
     justify-self: center;
+    /* margin-top: var(--page-padding); */
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
   }
 
   .header_title {
