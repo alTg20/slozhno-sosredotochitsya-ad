@@ -35,7 +35,7 @@
     --button-hover-color: rgb(53 52 48 / 0.5);
   }
 
-  :root.theme-light .rec {
+  .rec {
     display: none;
   }
 }
