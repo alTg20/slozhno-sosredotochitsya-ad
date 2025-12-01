@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  /* padding: 0 var(--page-padding); */
   background-color: var(--page-bg-color);
   background-image: var(--bg-image);
   background-size: cover;
@@ -17,6 +16,7 @@
   position: relative;
   align-items: center;
   height: var(--fullscreen-height);
+  min-height: 668px;
 }
 
 .header::before {
@@ -86,8 +86,11 @@
   border: 1px solid var(--button-hover-color);
 }
 
-.header__theme-menu-button:focus-visible {
+.header__theme-menu-button:focus {
   outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--decorations-color);
 }
 
@@ -96,7 +99,7 @@
   pointer-events: none;
 }
 
-h1 {
+.header_title {
   font-size: var(--big-title-size);
   color: var(--big-title-color);
   line-height: 82.5%;
@@ -165,6 +168,10 @@ a:hover {
 }
 
 a:focus {
+  outline: none;
+}
+
+a:focus-visible {
   outline: 1px solid var(--text-color);
 }
 
@@ -235,6 +242,7 @@ img {
   height: var(--fullscreen-height);
   display: grid;
   position: relative;
+  min-height: 668px;
 }
 
 .footer_title {
